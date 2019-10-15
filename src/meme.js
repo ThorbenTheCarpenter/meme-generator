@@ -31,8 +31,8 @@ export default function Meme() {
 
 
     return(
-        <div>
-           <form onSubmit={handleSubmit}>
+        <div className="main">
+           <form className="meme-form" onSubmit={handleSubmit}>
                     <input 
                         type="text"
                         name="topText"
@@ -50,10 +50,10 @@ export default function Meme() {
                 
                     <button>Gen</button>
                 </form>
-                <div className="write">
-                    <img src={randImg} alt="" />
+                <div className="meme">
                     <h2 className="top">{topText}</h2>
                     <h2 className="bottom">{botText}</h2>
+                    <img src={randImg} alt="" />         
                 </div>
         </div>
     )
