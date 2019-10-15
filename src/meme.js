@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react"
+import Header from "./header"
 
 export default function Meme() {
     
@@ -31,6 +32,8 @@ export default function Meme() {
 
 
     return(
+        <div>
+        <Header />
         <div className="main">
            <form className="meme-form" onSubmit={handleSubmit}>
                     <input 
@@ -55,6 +58,7 @@ export default function Meme() {
                     <h2 className="bottom">{botText}</h2>
                     <img src={randImg} alt="" />         
                 </div>
+        </div>
         </div>
     )
     }

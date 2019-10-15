@@ -1,14 +1,19 @@
 import React from 'react';
 import './App.css';
+import {BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import Start from "./start"
 import Meme from "./meme.js"
-import Header from "./header"
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Meme />
-    </div>
+  <div>
+  <Router>
+    <Switch>
+      <Route path="/" exact component={Start}/> 
+      <Route path="/meme" component={Meme}/>
+    </Switch>
+    </Router>
+  </div>
   );
 }
 

@@ -80,3 +80,27 @@ img {
   display: flex;
   justify-content: space-between;
 }
+
+.greeting {
+  width: 90%;
+  height: 40%;
+  font-size: 100px;
+  border: white solid 4px;
+  border-radius: 360px;
+  background: black;
+}
+
+.greetButton {
+  position: relative;
+  position:absolute;
+  left:50%;
+  margin-left:-10%;
+  top:60%;
+  margin-top:-20px;
+  width:20%;
+  height: 60px;
+}
+
+.greetButton:hover {
+  background: red;
+}
