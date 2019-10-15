@@ -48,7 +48,7 @@ export default function Meme() {
                         onChange={e => setBot(e.target.value)}
                     /> 
                 
-                    <button>Gen</button>
+                    <button>Generate!</button>
                 </form>
                 <div className="meme">
                     <h2 className="top">{topText}</h2>
