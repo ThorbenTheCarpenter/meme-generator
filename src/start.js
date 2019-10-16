@@ -1,12 +1,9 @@
 import React from "react"
 import Header from "./header"
-import { Redirect  } from "react-router-dom"
+import { navigate } from 'hookrouter';
 
 export default function Start() {
 
-    const handleClick = (e) => {
-        return <Redirect to="/meme" />
-    }
 
     return(
         <div>
@@ -15,7 +12,7 @@ export default function Start() {
             Welcome to the Meme Generator!
         </h1>
         
-        <button className="greetButton" onClick={ handleClick }>
+        <button className="greetButton" onClick={ e => navigate('/meme') }>
            I'm going in!
         </button>
 

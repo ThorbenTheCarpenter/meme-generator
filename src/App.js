@@ -1,20 +1,18 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import { useRoutes } from 'hookrouter';
 import Start from "./start"
 import Meme from "./meme.js"
 
+const Routes = {
+  "/": () => <Start />,
+  "/meme": () => <Meme />
+}
+
+
 function App() {
-  return (
-  <div>
-  <Router>
-    <Switch>
-      <Route path="/" exact component={Start}/> 
-      <Route path="/meme" component={Meme}/>
-    </Switch>
-    </Router>
-  </div>
-  );
+  const routeResult = useRoutes(Routes)
+  return routeResult
 }
 
 export default App;
